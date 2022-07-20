@@ -54,15 +54,16 @@ Would you allow YMIR to send us automatic reports helps us prioritize what to fi
 These reports can include things like task type, how much resources you’re using. NO personal information collected.
 EOF
 
-while true; do
-    read -p "You choose (Y/n)?" yn
-    case $yn in
-        [Yy]*|'' ) choose_yes; break;;
-        [Nn]* ) choose_no; break;;
-        * ) echo "Please answer (y)es or (n)o.";;
-    esac
-done
-}
+choose_no;
+# while true; do
+#     read -p "You choose (Y/n)?" yn
+#     case $yn in
+#         [Yy]*|'' ) choose_yes; break;;
+#         [Nn]* ) choose_no; break;;
+#         * ) echo "Please answer (y)es or (n)o.";;
+#     esac
+# done
+# }
 
 set_label_tool() {
 if ! cat ${ENV_FILE} | grep "${FIELD_LABEL_TOOL}=$"; then
